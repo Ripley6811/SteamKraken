@@ -1,4 +1,4 @@
-application: SteamKraken
+application: steamkraken
 version: 1
 runtime: python27
 api_version: 1
@@ -8,6 +8,21 @@ handlers:
 - url: /favicon\.ico
   static_files: favicon.ico
   upload: favicon\.ico
+  
+- url: /ThirdParty
+  static_dir: ThirdParty
+  
+- url: /Utils
+  static_dir: Utils
+  
+- url: /Maps
+  static_dir: Maps
+  
+- url: /Classes
+  static_dir: Classes
+  
+- url: /Game
+  static_dir: Game
 
 - url: .*
   script: main.app
@@ -15,3 +30,6 @@ handlers:
 libraries:
 - name: webapp2
   version: "2.5.2"
+
+- name: jinja2
+  version: latest

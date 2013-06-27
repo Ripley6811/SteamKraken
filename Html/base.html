@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{title}}</title>
+</head>
+
+<body>
+  {% for c in canvas %}
+    <canvas id={{c}}></canvas>
+  {% endfor %}
+</body>
+  {% for script in scripts %}
+    <script type="text/javascript" src= {{script}} ></script>
+  {% endfor %}
+
+</html>
+
